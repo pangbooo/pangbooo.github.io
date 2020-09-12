@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0116)http://123.57.54.232:8080/%E7%9E%BF%E5%BF%97%E5%B9%B3/1801700/%E5%8D%97%E6%B9%96%E6%A0%A1%E5%8C%BA%E5%8D%97%E9%97%A8 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=11.0000" http-equiv="X-UA-Compatible">
+     
+     
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<meta name="csrf-token" content="laNjMw7Lsjy9FVeLL3z1nfU2EZPQUnX3uPWAmkYU">     
+<title>东北大学测温验证平台</title>    <link href="./visitor.css" rel="stylesheet"> 
+<!-- <LINK href="东北大学测温验证平台_files/animate.min.css" rel="stylesheet"> -->
+    
+<style>
+        @-webkit-keyframes pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        @keyframes  pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        .list-group {
+            padding: 1em;
+        }
+        .list-group-item {
+            font-size: 1.4em;
+            padding: 0.1em;
+            border: 0px;
+        }
+    </style>
+ 
+<meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></head> 
+<body onload="startTime()">
+<div id="app">
+<div class="card border-0 text-center" style="color: rgb(4, 111, 55);">
+<div class="card-body">
+<h2 class="card-title p-2">东北大学通行验证</h2>
+<div class="animated infinite pulse p-2"> 
+       <img src="./111.png" style='width: 227px;'>
+            </div>
+<p class="card-text p-2" style="font-size: 1.3em;">                时间：<font><span id="nowDateTimeSpan">2020-09-12 21:16:33</span></font>        </p></div></div>
+<ul class="list-group list-group-flush" style="background-color: rgb(4, 111, 55);">
+  <li class="list-group-item bg-transparent text-white d-flex">
+  <div style="text-align-last: justify; min-width: 4em;">学工号</div>：
+  <div class="sid">1801700</div></li>
+  <li class="list-group-item bg-transparent text-white d-flex">
+  <div style="text-align-last: justify; min-width: 4em;">姓名</div>：
+  <div class="name">瞿志平</div></li>
+  <li class="list-group-item bg-transparent text-white d-flex">
+  <div style="text-align-last: justify; min-width: 4em;">验证位置</div>：
+  <div class="door">南湖校区南门</div></li>
+  <li class="list-group-item bg-transparent text-white d-flex">
+  <div style="text-align-last: justify; min-width: 4em;">进出状态</div>：
+  <div>进入</div></li></ul></div>
+
+         
+    
+
+<script language="JavaScript">
+            function startTime()   
+            {   
+                var today=new Date();//定义日期对象   
+                var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+                var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+                var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+                var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+                var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+                var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+                // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+                MM=checkTime(MM);
+                dd=checkTime(dd);
+                mm=checkTime(mm);   
+                ss=checkTime(ss);    
+                var day; //用于保存星期（getDay()方法得到星期编号）
+                if(today.getDay()==0)   day   =   "星期日 " 
+                if(today.getDay()==1)   day   =   "星期一 " 
+                if(today.getDay()==2)   day   =   "星期二 " 
+                if(today.getDay()==3)   day   =   "星期三 " 
+                if(today.getDay()==4)   day   =   "星期四 " 
+                if(today.getDay()==5)   day   =   "星期五 " 
+                if(today.getDay()==6)   day   =   "星期六 " 
+                document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss;   
+                <!--setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 -->
+            }   
+
+            function checkTime(i)   
+            {   
+                if (i<10){
+                    i="0" + i;
+                }   
+                  return i;
+            }  
+        </script></body></html>
